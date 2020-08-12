@@ -1,0 +1,13 @@
+.cards{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.image{
+    width: 275px;
+    height: 125px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}

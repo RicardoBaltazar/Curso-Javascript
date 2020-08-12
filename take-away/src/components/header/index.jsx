@@ -23,6 +23,7 @@ export default function Menu(){
                 </div>
                 <img src={img} alt="iamgen chefe de cozinha" className='image-banner'/>
             </div>
+            <h3>Melhores Receitas</h3>
         </header>
         </>
     )

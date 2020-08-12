@@ -5,7 +5,7 @@
 }
 
 .menu h1 {
-    margin-right: 8rem;
+    margin-right: 4rem;
     color: black;
     font-size: 28px;
     font-weight: 400;
@@ -52,4 +52,10 @@
 
 .image-banner {
     height: 250px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px 0 15px 0;
 }
