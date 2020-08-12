@@ -11,3 +11,8 @@
     margin-bottom: 10px;
     object-fit: cover;
 }
+
+.cards p {
+    font-size: 18px;
+    font-weight: 500;
+}

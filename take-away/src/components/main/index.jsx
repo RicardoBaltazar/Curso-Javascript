@@ -12,6 +12,9 @@ export default function Main() {
                 <Cards img={image} title="prato do dia"/>
                 <Cards img={image} title="prato do dia"/>
                 <Cards img={image} title="prato do dia"/>
+                <Cards img={image} title="prato do dia"/>
+                <Cards img={image} title="prato do dia"/>
+                <Cards img={image} title="prato do dia"/>
             </div>
         </>
     )
