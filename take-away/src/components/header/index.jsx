@@ -8,9 +8,10 @@ export default function Menu(){
         <>
         <header>
             <nav className='menu'>
-                <h1>Take Away</h1>
-                <a href="">Sobre</a>
+                <h1>Foodfy</h1>
+                <a href="">Mais Acessadas</a>
                 <a href="">Receitas</a>
+                <a href="">Cozinheiors</a>
             </nav>
             <div className='banner'>
                 <div>
