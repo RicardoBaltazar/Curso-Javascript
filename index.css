@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-page header nav {
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.home-page main section {
+    display: flex;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.link-login{
+    display: none;
+    font-size: 18px;
+}
+
+@media(max-width: 1023px){
+    .link-login{
+        display: block;
+
+    }
+}
