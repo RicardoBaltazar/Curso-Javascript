@@ -27,17 +27,17 @@
         <main>
             <section>
                 <div class="row">
-                    <form class="col s12">
+                    <form method="POST" action="login_connect.php" class="col s12">
                         <h4>Login</h4>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="email" type="email" class="validate">
+                                <input id="email" name="email" type="email" class="validate" required>
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="password" type="password" class="validate">
+                                <input id="password" name="password" type="password" class="validate" required>
                                 <label for="password">Password</label>
                             </div>
                         </div>

@@ -7,11 +7,15 @@ if(isset($_POST['action'])){
     $lastName = mysqli_escape_string($connect, $_POST['last_name']);
     $email = mysqli_escape_string($connect, $_POST['email']);
     $password = mysqli_escape_string($connect, $POST['password']);
+
     
-    $nome = $firstName.' '.$lastName;
+    $name = $firstName.' '.$lastName;
     $securePassword = password_hash($password, PASSWORD_DEFAULT);
+
+    $name = strtolower($name);
+    $email = strtolower($email);
     
-    $sql = "insert into client(name, email, password)values('$nome', '$email', '$securePassword')";
+    $sql = "insert into client(name, email, password)values('$name', '$email', '$securePassword')";
     
     if(mysqli_query($connect, $sql)){
         header('Location: index.php?Success');
