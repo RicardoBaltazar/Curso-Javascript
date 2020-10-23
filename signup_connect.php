@@ -2,6 +2,7 @@
 
 require_once 'db_connect.php';
 
+
 if(isset($_POST['action'])){
     $firstName = mysqli_escape_string($connect, $_POST['first_name']);
     $lastName = mysqli_escape_string($connect, $_POST['last_name']);
