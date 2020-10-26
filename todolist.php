@@ -14,7 +14,9 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == 
   }
 
 $logado = $_SESSION['email'];
+$senha = $_SESSION['password'];
 echo $logado;
+echo $senha;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
