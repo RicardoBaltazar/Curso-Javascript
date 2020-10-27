@@ -57,10 +57,11 @@ $name = $_SESSION['name'];
                             </tr>
 
                             <?php
-                            $item = mysqli_query($connect, "SELECT * FROM list");
+                            //$item = mysqli_query($connect, "SELECT * FROM list");
+                            $item = mysqli_query($connect, "SELECT * from list where list.user = '$name'");
                             while ($row = mysqli_fetch_array($item)) {
                                 echo "<tr><td>" . $row['id'] . "</td>
-                                <td style='margin-left:25px;'>" . $row['user'] . "</td>
+                                <td style='margin-left:25px;'>" . $name . "</td>
                                 <td>" . $row['item'] . "</td>
                                 <td>
                                     <a href='delete_items.php?delete-id=" . $row['id'] . "'' class='btn-floating red'>
