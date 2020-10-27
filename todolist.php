@@ -5,6 +5,7 @@ o caminho para a página principal do site (sistema), burlando assim a obrigaç�
 fazer um login, com isso se ele não estiver feito o login não será criado a session,
 então ao verificar que a session não existe a página redireciona o mesmo
  para a index.php.*/
+require_once 'db_connect.php';
 session_start();
 if ((!isset($_SESSION['name']) == true) and (!isset($_SESSION['email']) == true) and (!isset($_SESSION['password']) == true)) {
     unset($_SESSION['name']);
@@ -33,7 +34,7 @@ $name = $_SESSION['name'];
         <header>
             <nav>
                 <div class="nav-wrapper ">
-                    <a href="#" class="brand-logo">TodoList</a>
+                    <a href="#" class="brand-logo">Lista de Tarefas</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li>
                             <p style="margin-right: 25px;"><?php echo $name; ?></p>
@@ -49,25 +50,28 @@ $name = $_SESSION['name'];
                 <div class="row">
                     <h4>Lista</h4>
                     <table>
-                        <tr>
-                            <td style="font-weight: bold;">Nº</td>
-                            <td style="font-weight: bold;">Nome</td>
-                            <td style="font-weight: bold;">Descrição</td>
-                        </tr>
-                        <tr>
-                            <td>Nº</td>
-                            <td>User</td>
-                            <td>Description</td>
-                            <td>
-                                <button class="btn-floating red">
-                                    <i class="material-icons">delete</i>
-                                </button>
-                            </td>
-                        </tr>
-                        <?php
+                            <tr>
+                                <td style="font-weight: bold;">Nº</td>
+                                <td style="font-weight: bold;">Nome</td>
+                                <td style="font-weight: bold;">Descrição</td>
+                            </tr>
+
+                            <?php
+                            $item = mysqli_query($connect, "SELECT * FROM list");
+                            while ($row = mysqli_fetch_array($item)) {
+                                echo "<tr><td>" . $row['id'] . "</td>
+                                <td style='margin-left:25px;'>" . $row['user'] . "</td>
+                                <td>" . $row['item'] . "</td>
+                                <td>
+                                    <a href='delete_items.php?delete-id=" . $row['id'] . "'' class='btn-floating red'>
+                                        <i class='material-icons'>delete</i>
+                                    </a>
+                                </td>
+                                </tr>";
+                            }
+                            ?>
 
 
-                        ?>
                     </table>
                     <form method="post" action="todolist_connect.php" class="col s12">
                         <div class="row" style="display:flex; align-items:center;">

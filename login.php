@@ -16,7 +16,7 @@
         <header>
             <nav>
                 <div class="nav-wrapper ">
-                    <a href="#" class="brand-logo">TodoList</a>
+                    <a href="#" class="brand-logo">Lista de Tarefas</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="signup.php">Cadastre - se</a></li>
                     </ul>

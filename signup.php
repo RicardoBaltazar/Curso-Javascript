@@ -24,7 +24,7 @@
         <header>
             <nav>
                 <div class="nav-wrapper ">
-                    <a href="login.php" class="brand-logo">TodoList</a>
+                    <a href="login.php" class="brand-logo">Lista de Tarefas</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li><a href="login.php">Login</a></li>
                     </ul>
