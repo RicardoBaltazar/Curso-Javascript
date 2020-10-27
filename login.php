@@ -29,7 +29,6 @@
                 <div class="row">
                     <form method="post" action="login_connect.php" class="col s12">
                         <h4>Login</h4>
-
                         <div class="row">
                             <div class="input-field col s12">
                                 <input  name="name" type="text" class="validate" required>
@@ -49,7 +48,6 @@
                             </div>
                         </div>
                         <button class="btn waves-effect waves-light" type="submit" name="action">Fazer Login</button>
-                    
                     </form>
                 </div>
                 

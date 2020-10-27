@@ -6,12 +6,11 @@ fazer um login, com isso se ele não estiver feito o login não será criado a s
 então ao verificar que a session não existe a página redireciona o mesmo
  para a index.php.*/
 session_start();
-if((!isset ($_SESSION['name']) == true) and (!isset($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true))
-{
-  unset($_SESSION['name']);
-  unset($_SESSION['email']);
-  unset($_SESSION['password']);
-  header('location:index.php');
+if ((!isset($_SESSION['name']) == true) and (!isset($_SESSION['email']) == true) and (!isset($_SESSION['password']) == true)) {
+    unset($_SESSION['name']);
+    unset($_SESSION['email']);
+    unset($_SESSION['password']);
+    header('location:index.php');
 }
 
 $name = $_SESSION['name'];
@@ -36,7 +35,9 @@ $name = $_SESSION['name'];
                 <div class="nav-wrapper ">
                     <a href="#" class="brand-logo">TodoList</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><p style="margin-right: 25px;"><?php echo $name; ?></p></li>
+                        <li>
+                            <p style="margin-right: 25px;"><?php echo $name; ?></p>
+                        </li>
                         <li><a href="logout.php">Sair</a></li>
                     </ul>
                 </div>
@@ -46,31 +47,35 @@ $name = $_SESSION['name'];
         <main>
             <section>
                 <div class="row">
-                    <form class="col s12">
-                        <h4>Lista</h4>
-                        <table>
-                            <tr>
-                                <td style="font-weight: bold;">Nº</td>
-                                <td style="font-weight: bold;">Nome</td>
-                                <td style="font-weight: bold;">Descrição</td>
-                            </tr>
-                            <tr>
-                                <td>Nº</td>
-                                <td>User</td>
-                                <td>Descriptionlllllllllllllllllll</td>
-                                <td>
-                                    <button class="btn-floating red">
-                                        <i class="material-icons">delete</i>
-                                    </button>
-                                </td>
-                            </tr>
-                        </table>
+                    <h4>Lista</h4>
+                    <table>
+                        <tr>
+                            <td style="font-weight: bold;">Nº</td>
+                            <td style="font-weight: bold;">Nome</td>
+                            <td style="font-weight: bold;">Descrição</td>
+                        </tr>
+                        <tr>
+                            <td>Nº</td>
+                            <td>User</td>
+                            <td>Description</td>
+                            <td>
+                                <button class="btn-floating red">
+                                    <i class="material-icons">delete</i>
+                                </button>
+                            </td>
+                        </tr>
+                        <?php
+
+
+                        ?>
+                    </table>
+                    <form method="post" action="todolist_connect.php" class="col s12">
                         <div class="row" style="display:flex; align-items:center;">
-                            <div class="input-field col s10">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" name="item-description" class="materialize-textarea"></textarea>
                                 <label for="textarea1">Descrição</label>
                             </div>
-                            <button class="btn waves-effect waves-light col s6" type="submit" name="action">Adicionar</button>
+                            <button class="btn waves-effect waves-light col s6" type="submit" name="action-todolist">Adicionar</button>
                         </div>
                     </form>
                 </div>
