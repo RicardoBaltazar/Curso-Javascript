@@ -27,9 +27,15 @@
         <main>
             <section>
                 <div class="row">
-                    <form method="POST" action="login_connect.php" class="col s12">
+                    <form method="post" action="login_connect.php" class="col s12">
                         <h4>Login</h4>
 
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input  name="name" type="text" class="validate" required>
+                                <label for="name">Nome</label>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="email" name="email" type="email" class="validate" required>

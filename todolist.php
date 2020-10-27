@@ -6,17 +6,15 @@ fazer um login, com isso se ele não estiver feito o login não será criado a s
 então ao verificar que a session não existe a página redireciona o mesmo
  para a index.php.*/
 session_start();
-if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true))
+if((!isset ($_SESSION['name']) == true) and (!isset($_SESSION['email']) == true) and (!isset ($_SESSION['password']) == true))
 {
+  unset($_SESSION['name']);
   unset($_SESSION['email']);
   unset($_SESSION['password']);
   header('location:index.php');
-  }
+}
 
-$logado = $_SESSION['email'];
-$senha = $_SESSION['password'];
-echo $logado;
-echo $senha;
+$name = $_SESSION['name'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,7 +36,8 @@ echo $senha;
                 <div class="nav-wrapper ">
                     <a href="#" class="brand-logo">TodoList</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="login.php">Sair</a></li>
+                        <li><p style="margin-right: 25px;"><?php echo $name; ?></p></li>
+                        <li><a href="logout.php">Sair</a></li>
                     </ul>
                 </div>
             </nav>

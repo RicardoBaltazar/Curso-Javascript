@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -27,7 +35,7 @@
         <main>
             <section>
                 <div class="row">
-                    <form action="signup_connect.php" method="POST" class="col s12">
+                    <form method="post" action="signup_connect.php"  class="col s12">
                         <h4>Cadastre - se</h4>
                         <div class="row">
                             <div class="input-field col s6">
@@ -47,7 +55,7 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="password" name="password" type="password" class="validate" required>
+                                <input  name="password" type="password" class="validate" required>
                                 <label for="password">Password</label>
                             </div>
                         </div>
@@ -65,5 +73,4 @@
 
 
 </body>
-
 </html>

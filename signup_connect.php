@@ -7,7 +7,7 @@ if(isset($_POST['action'])){
     $firstName = mysqli_escape_string($connect, $_POST['first_name']);
     $lastName = mysqli_escape_string($connect, $_POST['last_name']);
     $email = mysqli_escape_string($connect, $_POST['email']);
-    $password = mysqli_escape_string($connect, md5($POST['password']));
+    $password = mysqli_escape_string($connect, md5($_POST['password']));
 
     $name = $firstName.' '.$lastName;
 
@@ -22,4 +22,5 @@ if(isset($_POST['action'])){
         header('Location: signup.php?Error');
     }
 }
+
 ?>
