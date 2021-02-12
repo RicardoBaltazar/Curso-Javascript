@@ -1,0 +1,53 @@
+@media(max-width:991px){
+    
+}
+
+@media(max-width:767px){
+    .painel {
+        width: 100vw;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .painel header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .painel header h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .form-login {
+        align-items: center;
+        width: 100%;
+    }
+
+    .login-input-field{
+        align-items: center;
+        width: 100%;
+    }
+
+    .login-input-field input {
+        width: 100%;
+    }
+    
+    .form-login button {
+        width: 100%;
+    }
+
+    .input-field{
+        width: 100%;
+    }
+
+    .painel main .input-field input{
+        width: 100%;
+    }
+
+    .todolist li{
+        width: 100%;
+        font-size: 14px;
+    }
+}

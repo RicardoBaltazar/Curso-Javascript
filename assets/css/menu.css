@@ -1,0 +1,42 @@
+.painel header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.painel header div p {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.painel header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painel header ul li {
+    margin-left: 25px;
+    transition: 0.2s;
+}
+
+.painel header ul .logout:hover {
+    color: var(--tertiary-color);
+    cursor: pointer;
+}
+
+.li-login {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+}
+
+.li-login:hover{
+    cursor: pointer;
+    background-color: #d47e7b;
+    color: #fff;
+}

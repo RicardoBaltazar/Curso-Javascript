@@ -1,0 +1,70 @@
+.painel main .input-field {
+    display: flex;
+    margin: 25px 0;
+}
+
+.painel main .input-field input{
+    width: 25vw;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px 0 0 10px;
+}
+
+.checked{
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: line-through;
+}
+
+.btn-submit {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: -10px;
+    transition: 0.2s;
+}
+
+.btn-submit:hover{
+    cursor: pointer;
+    background-color: #d47e7b;
+    border-color: #d47e7b;
+}
+
+.todolist li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    padding: 10px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
+.status {
+    padding: 10px 15px;
+    background-color:var(--tertiary-color);
+    margin: 0 5px;
+}
+
+.status:hover{
+    background-color: #d47e7b;
+    transition: 0.2s;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-delete-item{
+    padding: 10px 15px;
+    background-color:var(--tertiary-color);
+}
+
+.btn-delete-item:hover{
+    background-color: #d47e7b;
+    transition: 0.2s;
+    color: #ffffff;
+    cursor: pointer;
+}
