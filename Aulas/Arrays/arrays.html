@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <script>
+        const array = [1, 2, 3, 'ola', true];
+        const array_numeros = [1,2,3,4,5];
+        
+        //EVERY verifica cada elemento do array e retorna um boleano true ou false.
+        let todos_são_numeros = array.every(function (element){
+            return typeof element === 'number';
+            //vai retornar falso pois nem todos são números. nem todos os elementos são true.
+        });
+        console.log(todos_são_numeros);
+
+        //com o SOME é o contrário, se apenas um elemento tiver o resultado true, ele retorna tudo true.
+        let tem_um_numero = array.some(function (element){
+            return typeof element === 'number';
+            //vai retornar falso pois nem todos são números. nem todos os elementos são true.
+        });
+        console.log(tem_um_numero);
+
+
+        //FILTER é usado para filtrar uma array e não altera a array original, ele retorna nova array. por exemplo: 
+        let arrayFilter = array.filter(function(element, index, _array){
+            return typeof element === 'number';
+           
+        })
+        console.log(arrayFilter);
+
+        
+        //FOREACH serve para fazer uma iteração dentro do array. ele não retorna uma nova array.
+        array.forEach(function(element, index, array){
+            console.log(element, index);
+        })
+
+        //MAP ele faz uma iteração na array e retorna uma nova array com os dados transformados.
+        let array_numeros_multi = array_numeros.map(function(element, index, array_numeros){
+            return element * element;
+        })
+        console.log(array_numeros_multi);
+    </script>
+</body>
+</html>
