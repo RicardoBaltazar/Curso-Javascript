@@ -1,0 +1,64 @@
+  
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar a cor de fundo</title>
+    <style>
+        .body {
+            background-color: #1E90FF;
+            outline: none;
+        }
+
+        .page-home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-home button {
+            margin-top: 20%;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            background-color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+
+        .page-home button:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <div class="page-home">
+        <button id="button">Alterar a Cor de Fundo</button>
+    </div>
+
+
+    <script>
+        let button = document.querySelector('#button')
+        //let pageHome = document.querySelector('.page-home')
+        let allColor = []
+        allColor[0] = '#FF00FF'
+        allColor[1] = '#1E90FF'
+        allColor[2] = '#FF6347'
+        allColor[3] = '#F0F8FF'
+
+
+
+        button.addEventListener('click', function () {
+            document.querySelector('.body').style.backgroundColor = allColor[Math.floor(Math.random() * 4)]
+        })
+
+
+    </script>
+</body>
+
+</html>
